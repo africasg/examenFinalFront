@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="layoutGeneral"> 
+          <img src="/Rick-and-Morty.png" alt="Rick and Morty" width={150} height={80}/>
+          <h1>Archivo Rick y Morty</h1>
+          <Link href="/"><button>Home</button></Link>
+          </div>
+          {children}</body>
     </html>
   );
 }
