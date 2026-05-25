@@ -1,5 +1,6 @@
 .generalBarra{
 display: flex;
+justify-content: center;
   align-items: center;
   gap: 12px;
   background: white;
@@ -19,10 +20,14 @@ display: flex;
   background: transparent;
 }
 .generalBarra button{
-    transition: transform 1s;
-    cursor: pointer;
-    border-radius: 2px;
-    border-color: green;
+padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #68b015, #367d0c);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  transition: 0.2s;
 }
 
 .generalBarra button:hover{

@@ -1,4 +1,5 @@
 "use client"
+import "./filtroStatus.css"
 type Props={
     status:string,
     setStatus:React.Dispatch<React.SetStateAction<string>>
@@ -15,6 +16,7 @@ export const FiltroStatus = (props:Props)=>{
         }
     }
     return(
+        <div className="botonFiltro">
         <button onClick={cambiarEstado}>Status: {props.status}</button>
-    )
+         </div>)
 }

@@ -6,14 +6,13 @@ body{
   
 }
 .layoutGeneral{
-display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    flex-direction: row;
+    background-color: #556b2f;
+    flex-flow: row;
+    place-content: center space-between;
     align-items: center;
-    justify-content: space-between;
-    background-color: darkolivegreen;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .layoutGeneral h1{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -41,8 +40,15 @@ transition: transform 0.5s;
   color:rgb(0, 0, 0)
 }
 .filtros button{
-  width: 150px;
-background-color: beige;
-transition: transform 0.5s;
-cursor: pointer;
+ cursor: pointer;
+  background-color: rgb(0 0 0 / 0.1);
+   width: 150px;
+  transition: transform .5s;
+}
+.filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

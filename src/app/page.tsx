@@ -8,6 +8,7 @@ import { FiltroStatus } from "./components/filtroStatus/filtroStatus"
 import { FiltroGender } from "./components/filtroGender/filtroGender"
 import { FuncionPaginacion } from "./components/paginador/paginador"
 import { api } from "@/lib/api"
+import Buscador from "./components/barraBusqueda/barraBusqueda"
 const Home = ()=>{
     const [personajes,setPersonajes] = useState<Character[]>([])
     const [page,setPage] = useState<number>(1)
@@ -33,15 +34,16 @@ useEffect(()=>{
     },[page,status,gender,search])
     return(
         <div className="generalPagina">
+          <Buscador setSearch={setSearch}></Buscador>
             <div className="filtros">
+            <div className="filtroStatus">
                 <FiltroStatus status={status} setStatus={setStatus}></FiltroStatus>
+                </div>
+                
+                <div className="filtroGender">
                 <FiltroGender gender={gender} setGender={setGender}></FiltroGender>
-                <input value={name} onChange={(e)=>setName(e.target.value)} 
-                onKeyDown={(e)=>{
-                  if(e.key === "Enter"){setSearch(name)}
-                }}></input>
-                <button onClick={()=>setSearch(name)}>Buscar</button>
-            </div>
+                </div>
+                </div>
             <h1>Número de personajes por página: {personajes.length}</h1>
             {error && <p>{error}</p>}
             {loading && <p>Loading...</p>}

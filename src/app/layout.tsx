@@ -27,9 +27,9 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <div className="layoutGeneral"> 
-          <img src="/Rick-and-Morty.png" alt="Rick and Morty" width={150} height={80}/>
+          <Link href="/"> <img src="/Rick-and-Morty.png" alt="Rick and Morty" width={150} height={80}/></Link>
           <h1>Archivo Rick y Morty</h1>
-          <Link href="/"><button>Home</button></Link>
+          
           </div>
           {children}</body>
     </html>

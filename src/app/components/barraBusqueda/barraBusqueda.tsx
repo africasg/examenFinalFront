@@ -9,8 +9,10 @@ const Buscador =  ({setSearch}:Props)=>{
     return(
         <div className="generalBarra">
         <p>Nombre:</p>
-        <input onChange={(e) => { setName(e.target.value) } }></input>
-        <button onClick={()=>{setSearch(name)}}>Buscar</button>
+        <input value={name} onChange={(e)=>setName(e.target.value)} 
+                onKeyDown={(e)=>{
+                  if(e.key === "Enter"){setSearch(name)}}}></input>
+                <button onClick={()=>setSearch(name)}>Buscar</button>
         </div>
     )
 

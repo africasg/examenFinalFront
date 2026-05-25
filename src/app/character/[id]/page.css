@@ -1,0 +1,29 @@
+.generalPaginaPersonajes{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  
+}
+.generalPersonaje{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 15%;
+    padding: 30px;
+    gap:0px
+
+}
+.generalPersonaje img{
+    border: 2px dashed green;
+    border-radius: 20%;
+}
+.generalPersonaje h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkgreen;
+}
+.generalPersonaje h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

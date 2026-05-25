@@ -1,4 +1,5 @@
 "use client"
+import "../filtroStatus/filtroStatus.css"
 type Props={
     gender:string,
     setGender:React.Dispatch<React.SetStateAction<string>>
@@ -15,6 +16,8 @@ export const FiltroGender = (props:Props)=>{
         }
     }
     return(
+        <div className="botonFiltro">
         <button onClick={cambiarGenero}>Gender: {props.gender}</button>
+        </div>
     )
 }
